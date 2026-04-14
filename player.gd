@@ -100,3 +100,7 @@ func take_damage(amount: int = 1):
 func die():
 	print("Player is dead")
 	queue_free()
+
+
+func _on_cave_entrance_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://cutscenes/win.tscn")

@@ -1,16 +1,18 @@
-[gd_scene format=3 uid="uid://vso0g1nd8u3e"]
+[gd_scene load_steps=4 format=3 uid="uid://vso0g1nd8u3e"]
 
-[ext_resource type="Texture2D" uid="uid://cdxsro1bfyeht" path="res://assets/old_man.png" id="1_tjsre"]
+[ext_resource type="Script" uid="uid://csxphrfwqv41a" path="res://old_man.gd" id="1_fs47u"]
+[ext_resource type="Texture2D" uid="uid://cshqxeh1674k2" path="res://bodies/assets/old_man.png" id="1_tjsre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs47u"]
 size = Vector2(100, 119)
 
-[node name="OldMan" type="CharacterBody2D" unique_id=750193079]
+[node name="OldMan" type="CharacterBody2D"]
+script = ExtResource("1_fs47u")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1333899776]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_tjsre")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1986766547]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, 0.5)
 shape = SubResource("RectangleShape2D_fs47u")
